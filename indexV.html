@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+
+
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" />
+
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />
+
+
+
+    <script src="vendors/vue.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+    <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
+
+    <!-- Nos fichiers -->
+
+    <script src="./line.js"></script>
+
+    <script src="./multiline.js"></script>
+
+</head>
+
+
+
+<body>
+
+
+
+    <!-- Début de la 1ère ligne -->
+
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm">
+
+
+                    <div align="center">
+
+                        <a href="./indexV.html" target="_self">
+                            <h1>Un super site de journalisme</h1>
+                        </a>
+
+                        <h5>"Il est beau, il est beau, il est beau." </h5>
+
+                        <i><right>Alphonse de Lamartine</right></i>
+
+                    <br/>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div>
+
+        <div>
+
+            <div>
+
+                <div>
+
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col-sm">
+
+                              <!-- Début du code du carrousel -->
+
+                    <center>
+
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" width="100%">
+
+                            <ol class="carousel-indicators">
+
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+
+                            </ol>
+
+
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+
+                                    <img class="d-block w-10" src="glacier.jpg" alt="Le changement climatique">
+
+                                    <div class="carousel-caption d-none d-md-block">
+
+                                        <h3 style="color:red;"><a href="./indexV2.html" target="_self">Un premier article</a></h3>
+
+                                        <p style="color:red;">Par Jean-Christophe</p>
+
+                                    </div>
+
+                                </div>
+
+                            
+
+
+
+                                
+
+
+
+                                <div class="carousel-item">
+
+                                    <img class="d-block w-10" src="glacier.jpg" alt="La radicalisation">
+
+                                    <div class="carousel-caption d-none d-md-block">
+
+                                        <h3 style="color:red;"><a href="./indexV2.html" target="_self">Un autre article</a></h3>
+
+                                        <p style="color:red;">Par Magda</p>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="carousel-item">
+
+                                    <img class="d-block w-10" src="glacier.jpg" alt="Le changement climatique">
+
+                                    <div class="carousel-caption d-none d-md-block">
+
+                                        <h3 style="color:red;"><a href="./indexV2.html" target="_self">Un autre article</a></h3>
+
+                                        <p style="color:red;">Par Magda aussi</p>
+
+                                    </div>
+
+                                </div>
+
+                          
+
+                
+
+
+
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                                <span class="sr-only">Previous</span>
+
+                            </a>
+
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                                <span class="sr-only">Next</span>
+
+                            </a>
+
+                        </div>
+
+                       </center>
+
+                   </div>
+
+               </div>
+
+           </div>
+
+       </div>
+
+   </div>
+
+
+                        <!-- Fin du code du carrousel -->
+
+                        <!-- Début de la 3ème ligne-->
+
+                    </br>
+
+                    
+                            <div class="app container mt-5">
+
+                                <div class="row">
+
+                                    <div class="col-sm-6">
+
+                                        <h3>1. Évolution fictive de la quantité de CO2 dans l'atmosphère terrestre</h3>
+
+                                        <line-chart :height="200" class="mt-3 mb-5"></line-chart>
+
+                                        <h7>Gigatonnes de CO2 (Source: Imagination)</h7>
+
+
+                                    </div>
+
+                                    <div class="col-sm-6">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                       
+                    </br>
+
+
+                    <!--Nouveau code-->
+
+                      </br>
+
+                    
+                            <div class="app container mt-5">
+
+                                <div class="row">
+
+                                    <div class="col-sm-6">
+
+                                        <h3>2. Chronologie climatique</h3>
+
+
+                                    </div>
+
+                                    <div class="col-sm-6">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                       
+                    </br>
+
+
+</br></br>
+
+   <div class="row">
+
+            <div class="col-sm">
+
+                <h3> 1820 </h3>
+
+                <aside>
+
+                    <p>Joseph Fourier théorise l'effet de serre.</p>
+
+                    <br/>
+
+                </aside>
+
+            </div>
+
+                        <div class="col-sm">
+
+                            <img class="d-block w-10" src="kyoto.jpg" height="80%" >
+
+                        </div>
+
+    </div>
+
+
+
+    <div class="row">
+
+            <div class="col-sm">
+
+                <h3> 1967 </h3>
+
+                <aside>
+
+                    <p>Les scientifiques Syukuro Manabe et Richard Wetherald estiment dans une étude qu’un doublement de la production de CO2 aurait pour conséquence une augmentation de 2,3 degrés Celsius de la température sur le globe. </p>
+
+                    <br/>
+
+                </aside>
+
+            </div>
+
+                        <div class="col-sm">
+
+                            <img class="d-block w-10" src="kyoto.jpg" height="80%" >
+
+                        </div>
+
+    </div>
+
+
+    <div class="row">
+
+            <div class="col-sm">
+
+                <h3> 2005 </h3>
+
+                <aside>
+
+                    <p>Le protocole de Kyoto, qui engage 36 pays à réduire de 5% leurs émissions de CO2, entre en vigueur.</p>
+
+                    <br/>
+
+                </aside>
+
+            </div>
+
+                        <div class="col-sm">
+
+                            <img class="d-block w-10" src="kyoto.jpg" height="80%" >
+
+                        </div>
+
+    </div>
+
+    <div class="row">
+
+            <div class="col-sm">
+
+                <h3> 2017  </h3>
+
+                <aside>
+
+                    <p>Les États-Unis se retirent de l'accord de Paris sur le climat.</p>
+
+                    <br/>
+
+                </aside>
+
+            </div>
+
+                        <div class="col-sm">
+
+                            <img class="d-block w-10" src="kyoto.jpg" height="80%" >
+
+                        </div>
+
+    </div>
+
+
+
+
+
+                    <!-- Nouveau code -->
+
+    <!-- Les scripts de plus -->
+
+    <script src="vue.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+    <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
+
+    <!-- Nos fichiers -->
+
+    <script src="./line.js"></script>
+
+    <script src="./index.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
